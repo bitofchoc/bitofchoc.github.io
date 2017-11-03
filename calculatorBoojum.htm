@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/stylemenu.css"/>
+	<title>Calculator</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script>
+
+		var filling = 0;
+		var side = 0;
+		var drink = 0;
+		var extra = 0;
+
+		function showTotal() {
+		
+		
+			var total = parseFloat(filling + side + drink + extra).toFixed(2);
+			document.getElementById("total").innerHTML = ("&euro;" + total);
+		}
+		
+		function locationChecker() {
+			
+			var x = document.getElementById("selectLocation").value;
+			
+			if (x == "boojum") {
+				window.location.assign("calculatorBoojum.htm");
+			}
+			
+			else if (x == "burritosandblues") {
+				window.location.assign("calculatorBlues.htm");
+			}
+	
+		}
+		
+		function fillingFunction() {
+			
+			
+	
+			var x = document.getElementById("selectFilling").value;
+			
+			if (x == "vegetarian") {
+				filling = 6.60;
+				showTotal();
+			}
+			
+			else if (x == "chicken") {
+				filling = 6.90;
+				showTotal();
+			}
+			
+			else if (x == "pork") {
+				filling = 6.90;
+				showTotal();
+			}
+			
+			else if (x == "chilli") {
+				filling = 7.15;
+				showTotal();
+			}
+			
+			else if (x == "beef") {
+				filling = 7.15;
+				showTotal();
+			}
+			
+			else if (x == "chorizo") {
+				filling = 7.15;
+				showTotal();
+			}
+			
+		}
+		
+		function sidesFunction() {
+			
+			
+			var x = document.getElementById("selectSides").value;
+			
+			if (x == "tortillachips") {
+				side = 1.60;
+				showTotal();
+			}
+			
+			else if (x == "salsa") {
+				side = 2.60;
+				showTotal();
+			}
+			
+			else if (x == "guacemole") {
+				side = 3.10;
+				showTotal();
+			}
+			
+			else if (x == "queso") {
+				side = 3.10;
+				showTotal();
+			}
+			
+			else if (x == "chillibowl") {
+				side = 4.25;
+				showTotal();
+			}
+			
+			else if (x == "nachos") {
+				side = 4.45;
+				showTotal();
+			}
+	
+			else if (x == "none") {
+				side = 0.00;
+				showTotal();
+			}
+		}
+		
+		function drinkFunction() {
+			
+			var x = document.getElementById("selectDrink").value;
+			
+			if (x == "can") {
+				drink = 1.25;
+				showTotal();
+			}
+			
+			else if (x == "bottle") {
+				drink = 1.85;
+				showTotal();
+			}
+			
+			else if (x == "water") {
+				drink = 1.45;
+				showTotal();
+			}
+			
+			else if (x == "none") {
+				drink = 0.00;
+				showTotal();
+			}
+	
+		}
+		
+		function extraFunction() {
+			
+			
+			var x = document.getElementById("selectExtra").value;
+			
+			if (x == "jalapenos") {
+				extra = 0.45;
+				showTotal();
+			}
+			
+			else if (x == "peppers") {
+				extra = 0.55;
+				showTotal();
+			}
+			
+			else if (x == "guacemole") {
+				extra = 0.85;
+				showTotal();
+			}
+			
+			else if (x == "extrameat") {
+				extra = 2.10;
+				showTotal();
+			}
+			
+			else if (x == "none") {
+				extra = 0.00;
+				showTotal();
+			}
+		
+		}
+		
+
+	</script>
+</head>
+<body>
+
+<div id="logo"><h1>Burritos Dublin</h1></div>
+
+<ul class="topnav">
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="contactus.htm">Contact</a></li>
+  <li><a href="about.htm">About</a></li>
+  <li><a href="locations.htm">Locations</a></li>
+  <li><a href="calculator.htm" class="active">Calculator</a></li>
+  <li class="right"><a href="ownercontactlogin.htm">Login</a>
+</ul>
+
+<div class="section group">
+
+<div id="contactform">
+<h2>Meal Calculator</h2>
+
+
+	<div class="col span_all">
+	
+			<form name="contactus">
+				
+				Choose Location:<br/><br/>
+				<select id="selectLocation" onchange=" return locationChecker()">
+					<option value="select">Select</option>
+					<option value="boojum" selected>Boojum</option>
+					<option value="burritosandblues">Burritos and Blues</option>
+				</select><br/><br/>
+				
+				Choose Filling:<br/><br/>
+				<select id="selectFilling" onchange=" return fillingFunction()">
+					<option value="select" selected>Select</option>
+					<option value="vegetarian">Vegetarian</option>
+					<option value="chicken">Chicken</option>
+					<option value="pork">Shredded Pork</option>
+					<option value="chilli">Chilli Con Carne</option>
+					<option value="beef">Shredded Beef</option>
+					<option value="chorizo">Chorizo</option>
+				</select><br/><br/>
+				
+				Choose Sides:<br/><br/>
+				<select id="selectSides" onchange=" return sidesFunction()">
+					<option value="select" selected>Select</option>
+					<option value="tortillachips">Tortilla Chips</option>
+					<option value="salsa">Tortilla Chips &amp; Salsa</option>
+					<option value="guacemole">Tortilla Chips &amp; Guacemole</option>
+					<option value="queso">Tortilla Chips &amp; Queso</option>
+					<option value="chillibowl">Bowl of Chilli</option>
+					<option value="nachos">Nachos</option>
+					<option value="none">None</option>
+				</select><br/><br/>
+				
+				Choose Drink:<br/><br/>
+				<select id="selectDrink" onchange=" return drinkFunction()">
+					<option value="select" selected>Select</option>
+					<option value="can">Soft Drink (can)</option>
+					<option value="bottle">Soft Drink (bottle)</option>
+					<option value="water">Bottled Water</option>
+					<option value="none">None</option>
+				</select><br/><br/>
+				
+				Choose Extra:<br/><br/>
+				<select id="selectExtra" onchange=" return extraFunction()">
+					<option value="select" selected>Select</option>
+					<option value="jalapenos">Jalape&ntilde;os</option>
+					<option value="peppers">Saut&eacute;ed Peppers &amp; Onions</option>
+					<option value="guacemole">Guacamole</option>
+					<option value="extrameat">Extra Meat</option>
+					<option value="none">None</option>
+				</select><br/><br/>
+				
+			</form>
+			
+	<h2 id="total"></h2>
+	</div>
+
+
+</div>
+
+</body>
+</html>

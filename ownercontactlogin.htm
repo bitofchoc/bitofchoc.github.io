@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/stylemenu.css"/>
+	<title>Login</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<script>
+	
+		
+		function validatePassword() {
+			var usr = document.getElementById("usrname").value;
+			var pass = document.getElementById("passwrd").value;
+			if (usr == "admin" && pass == "pass"){
+				return true;
+			}
+			else {
+			
+				alert("Username or Password incorrect.")
+				return false;
+			}
+			
+		}
+	</script>
+</head>
+<body>
+
+<div id="logo"><h1>Burritos Dublin</h1></div>
+
+<ul class="topnav">
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="contactus.htm">Contact</a></li>
+  <li><a href="about.htm">About</a></li>
+  <li><a href="locations.htm">Locations</a></li>
+  <li><a href="calculator.htm">Calculator</a></li>
+  <li class="right"><a href="ownercontactlogin.htm" class="active">Login</a>
+</ul>
+
+<div class="section group">
+
+<div id="contactform">
+<h2> Business Query and Request Form </h2>
+
+
+	<div class="col span_all">
+	
+			<form name="login" onsubmit="return validatePassword()" id="login" action="ownercontactus.htm"><br/>
+				
+				Username:<br/>
+				<input type="text" name="username" id="usrname"/><br/><br/><br/>
+				Password:<br/>
+				<input type="password" name="password" id="passwrd"/>
+				<br/><br/><br/>
+				<input type="submit" id="submit" value="Submit Form"/>
+				<input type="reset" id="reset" value="Reset Form" />
+			</form>
+	
+	</div>
+
+
+</div>
+
+</body>
+</html>

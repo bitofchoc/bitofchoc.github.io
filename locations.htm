@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/stylemenu.css"/>
+	<title>Locations</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<script>
+	
+		function locationChecker() {
+			var x = document.getElementById("selectLocation").value;
+			if (x == "boojum") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19056.750419226624!2d-6.268520782517666!3d53.34157703909285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sboojum!5e0!3m2!1sen!2sie!4v1491911096772"  frameborder="0" class="mapGoogle" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "burritosandblues") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8248.05867111319!2d-6.267686832938468!3d53.33691504454925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9e321e9e65%3A0x402253ca953a7459!2sBurritos+%26+Blues!5e0!3m2!1sen!2sie!4v1491909494949" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "mamasrevenge") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8012.4031871055995!2d-6.257730353121605!3d53.34143531181801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9a74440b5f%3A0xf995bc147c7bd249!2sMama&#39;s+Revenge+Burrito+Hut!5e0!3m2!1sen!2sie!4v1491911141664" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "tolteca") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d16028.160122998777!2d-6.259250199564132!3d53.33251035870763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stolteca!5e0!3m2!1sen!2sie!4v1491911251327" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "pablopicante") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8012.82585055861!2d-6.266130704366455!3d53.33918583627779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9c36cd525b%3A0x9b936b1622f4d1c3!2sPablo+Picante!5e0!3m2!1sen!2sie!4v1491911758619" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "littleass") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d16029.106467956208!2d-6.270207496809951!3d53.32999177045465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sLittle+Ass+Burrito!5e0!3m2!1sen!2sie!4v1491911921600" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "saburritos") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13473.841334177007!2d-6.267754953304822!3d53.34574178883094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssaburrito!5e0!3m2!1sen!2sie!4v1491911958395" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+			
+			else if (x == "zambrero") {
+				document.getElementById("locationMap").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9530.676802694114!2d-6.265406688643434!3d53.33127603553937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670ea032e2b3bb%3A0x8895d32baaed09da!2sZambrero!5e0!3m2!1sen!2sie!4v1491912007741" class="mapGoogle" frameborder="0" allowfullscreen></iframe>';
+
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+<div id="logo"><h1>Burritos Dublin</h1></div>
+
+<ul class="topnav">
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="contactus.htm">Contact</a></li>
+  <li><a href="about.htm">About</a></li>
+  <li><a href="locations.htm" class="active">Locations</a></li>
+  <li><a href="calculator.htm">Calculator</a></li>
+  <li class="right"><a href="ownercontactlogin.htm">Login</a>
+</ul>
+
+<div class="section group">
+
+<div id="contactform">
+<h2>Locations </h2>
+
+
+	<div class="col span_all">
+	
+			<form name="contactus">
+				
+				Choose Location:<br/><br/>
+				<select id="selectLocation" onchange=" return locationChecker()">
+					<option value="select" selected>Select</option>
+					<option value="boojum">Boojum</option>
+					<option value="burritosandblues">Burritos and Blues</option>
+					<option value="mamasrevenge">Mamas Revenge</option>
+					<option value="tolteca">Tolteca</option>
+					<option value="pablopicante">Pablo Picante</option>
+					<option value="littleass">Little Ass Burritos</option>
+					<option value="saburritos">Saburritos</option>
+					<option value="zambrero">Zambrero</option>
+				</select><br/><br/><br/>
+				
+				<div id="locationMap"></div><br/><br/>
+				
+			</form>
+	
+	</div>
+
+
+</div>
+
+</body>
+</html>

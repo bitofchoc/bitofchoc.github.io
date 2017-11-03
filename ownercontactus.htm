@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/stylemenu.css"/>
+	<title>Enquiries</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<script>
+	
+		function reasonChecker() {
+			var x = document.getElementById("selectReason").value;
+			document.getElementById("reasonText").innerHTML = x + "?";
+		}
+		
+		function validateTextarea() {
+			var x = document.getElementById("textarea").value;
+			if (x == "" || x ==null){
+				alert("Please enter your request/query/complaint");
+				return false;
+			}
+			
+		}
+	</script>
+</head>
+<body>
+
+<div id="logo"><h1>Burritos Dublin</h1></div>
+
+<ul class="topnav">
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="contactus.htm">Contact</a></li>
+  <li><a href="about.htm">About</a></li>
+  <li><a href="locations.htm">Locations</a></li>
+  <li><a href="calculator.htm">Calculator</a></li>
+  <li class="right"><a href="ownercontactlogin.htm" class="active">Login</a>
+</ul>
+
+<div class="section group">
+
+<div id="contactform">
+<h2> Business Query and Request Form </h2>
+
+
+	<div class="col span_all">
+	
+			<form name="contactus" action="/action_page_post.php" onsubmit="return validateTextarea()" method="get">
+				
+				Reason for Contact:<br/><br/>
+				<select id="selectReason" onchange=" return reasonChecker()">
+				<option value="Query" selected>Query</option>
+				<option value="Request">Request</option>
+				<option value="Complaint">Complaint</option>
+				</select><br/><br/>
+				
+				What is your <span id="reasonText">Query?</span><br/><br/>
+				<textarea name="comment" id="textarea" rows="4" cols="50" placeholder="Type here..."/></textarea><br/><br/>
+				<input type="submit" id="submit" value="Submit Form"/>
+				<input type="reset" id="reset" value="Reset Form" />
+				
+			</form>
+	
+	</div>
+
+
+</div>
+
+</body>
+</html>

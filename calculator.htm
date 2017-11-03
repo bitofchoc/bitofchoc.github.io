@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/stylemenu.css"/>
+	<title>Calculator</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<script>
+	
+		function locationChecker() {
+			
+			var x = document.getElementById("selectLocation").value;
+			
+			if (x == "boojum") {
+				window.location.assign("calculatorBoojum.htm");
+			}
+			
+			else if (x == "burritosandblues") {
+				window.location.assign("calculatorBlues.htm");
+			}
+	
+		}
+		
+
+	</script>
+</head>
+<body>
+
+<div id="logo"><h1>Burritos Dublin</h1></div>
+
+<ul class="topnav">
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="contactus.htm">Contact</a></li>
+  <li><a href="about.htm">About</a></li>
+  <li><a href="locations.htm">Locations</a></li>
+  <li><a href="calculator.htm" class="active">Calculator</a></li>
+  <li class="right"><a href="ownercontactlogin.htm">Login</a>
+</ul>
+
+<div class="section group">
+
+<div id="contactform">
+<h2>Meal Calculator</h2>
+
+
+	<div class="col span_all">
+	
+			<form name="contactus">
+				
+				Choose Location:<br/><br/>
+				<select id="selectLocation" onchange=" return locationChecker()">
+					<option value="select" selected>Select</option>
+					<option value="boojum">Boojum</option>
+					<option value="burritosandblues">Burritos and Blues</option>
+				</select><br/><br/><br/>
+				
+				
+				
+			</form>
+	
+	</div>
+
+
+</div>
+
+</body>
+</html>
